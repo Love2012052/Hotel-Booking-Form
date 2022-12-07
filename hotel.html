@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      button {
+        width: 100%;
+        text-align: center;
+        background-color: blue;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        box-sizing: border-box;
+        padding: 20px 0px;
+        font-size: 16px;
+      }
+      .div1 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .divchild {
+        width: 40%;
+      }
+      form {
+        width: 40%;
+        color: blue;
+        padding: 20px 40px;
+        border: 4px solid blue;
+        border-radius: 10px;
+      }
+      .flex {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      @media screen and (max-width: 800px) {
+        .heading {
+          font-size: 16px;
+        }
+        h1 {
+          font-size: 16px;
+        }
+        form {
+          width: 70%;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; justify-content: center">
+      <form>
+        <h1>Hotel Booking Form</h1>
+        <h2 class="heading">First Name</h2>
+        <input type="text" placeholder="Your first name.." required />
+        <br />
+        <h2 class="heading">Last Name</h2>
+        <input type="text" placeholder="Your last name" required />
+        <br />
+        <h2 class="heading">Phone Number</h2>
+        <input type="number" placeholder="Enter your phone number" required />
+        <br />
+        <h2 class="heading">Email Address</h2>
+        <input type="email" placeholder="Enter your email" required />
+        <br />
+        <h2 class="heading" for="room">Room Preference</h2>
+        <select name="room" class="flex">
+          <option value="normal">Normal</option>
+          <option value="standard">Standard</option>
+          <option value="deluxe">Deluxe</option>
+        </select>
+        <br />
+        <br />
+        <div class="div1">
+          <div class="divchild">
+            <h2 class="heading" for="adult">Adult</h2>
+            <select name="adult" class="flex">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <div class="divchild">
+            <h2 class="heading" for="children">Children</h2>
+            <select name="children" class="flex">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div class="div1">
+          <div class="divchild">
+            <h2 class="heading">Check-in Date</h2>
+            <input type="date" required />
+          </div>
+          <div class="divchild">
+            <h2 class="heading">Check-in Time</h2>
+            <input type="time" required />
+          </div>
+        </div>
+        <br />
+        <div class="div1">
+          <div class="divchild">
+            <h2 class="heading">Check-out Date</h2>
+            <input type="date" required />
+          </div>
+          <div class="divchild">
+            <h2 class="heading">Check-out Time</h2>
+            <input type="time" required />
+          </div>
+        </div>
+        <br />
+        <button>Confirm</button>
+        <br />
+        <br />
+      </form>
+    </div>
+  </body>
+</html>
